@@ -1,0 +1,18 @@
+local PlrScripts = game.Players.LocalPlayer.PlayerScripts
+local anti1 = PlrScripts.LocalScript
+local anti2 = PlrScripts.LocalScript2 
+
+local s1 = anti1.Changed
+local s2 = anti2.Changed
+
+for i, connection in pairs(getconnections(s1)) do
+    connection:Disable()
+end
+
+for i, connection in pairs(getconnections(s2)) do
+    connection:Disable()
+end
+
+anti1:Destroy()
+wait(.1)
+anti2:Destroy()
